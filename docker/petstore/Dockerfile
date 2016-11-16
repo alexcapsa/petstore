@@ -1,5 +1,4 @@
-FROM acapsa/docker-windows-java
-
+FROM acapsa/petstore
 MAINTAINER alexcapsa@gmail.com
 
 EXPOSE 8080

@@ -1,7 +1,5 @@
 #! /bin/bash -e
 
-#docker rmi docker_docker-spring-web-boot
-
 mvn -f ../../pom.xml clean package
 
 rm -fr build
