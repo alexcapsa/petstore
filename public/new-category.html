@@ -1,0 +1,8 @@
+<form name="newCategoryForm" ng-submit="saveCategory()" novalidate>
+    <input id="addNewCategTxt" type="text" placeholder="New Category Name" ng-model="category.name"
+           class="form-control" required/>
+    <button id="addNewCategSaveBtn" type="submit" class="btn btn-primary pull-right"
+            ng-disabled="newCategoryForm.$invalid">
+        Save New Category
+    </button>
+</form>

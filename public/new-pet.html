@@ -1,0 +1,29 @@
+<div class="list-group-item">
+    <form name="newPetForm" ng-submit="newPetForm.$valid && savePet()" novalidate>
+        <h4>Add a New Pet</h4>
+        <fieldset class="form-group">
+            <input type="text" ng-model="pet.name" placeholder="Enter name" class="form-control" required=""/>
+        </fieldset>
+        <fieldset class="form-group">
+            <select ng-model="pet.category" class="form-control" required
+                    ng-options="category as category.name for category in categories track by category.id">
+                <option value="">Select Pet Category</option>
+            </select>
+        </fieldset>
+
+        <div class="list-group-item-heading">Images</div>
+        <div class="list-group-item">
+            <image-list></image-list>
+
+            <div class="fileUpload btn btn-primary">
+                <span>Select and Upload Image</span>
+                <input type="file" class="upload" id="file" custom-on-change="addImage" accept='image/*'/>
+            </div>
+        </div>
+
+        <fieldset class="form-group">
+            <br/>
+            <button type="submit" class="btn btn-success pull-right" ng-disabled="newPetForm.$invalid">Add Pet</button>
+        </fieldset>
+    </form>
+</div>

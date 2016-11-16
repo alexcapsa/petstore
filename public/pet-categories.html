@@ -1,0 +1,21 @@
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Category ID</th>
+            <th>Name</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="category in categories">
+            <td>{{category.id}}</td>
+            <td>{{category.name}}</td>
+            <td>
+                <button type="button" class="btn btn-danger" ng-click="deleteCategory(category)">Delete</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <new-category></new-category>
+</div>

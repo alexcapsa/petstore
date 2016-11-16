@@ -1,0 +1,29 @@
+<script type="text/ng-template" id="templateId">
+
+    <div id="target" ng-controller="ViewPetController">
+        <h2>Pet Details</h2>
+
+        <table class="table">
+            <tbody>
+            <tr>
+                <td>Pet id:</td>
+                <td>{{pet.id}}</td>
+            </tr>
+            <tr>
+                <td>Pet name:</td>
+                <td>{{pet.name}}</td>
+            </tr>
+            <tr>
+                <td>Pet category:</td>
+                <td>{{pet.category.name}}</td>
+            </tr>
+            </tbody>
+        </table>
+        <image-list></image-list>
+        <div class="ngdialog-buttons">
+            <button type="button" class="ngdialog-button ngdialog-button-default"
+                    ng-click="closePetDetails()">Close
+            </button>
+        </div>
+    </div>
+</script>

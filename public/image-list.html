@@ -1,0 +1,14 @@
+<table class="table" ng-show="pet.photoUrls.length">
+    <tbody>
+    <tr ng-repeat="url in pet.photoUrls">
+        <td>
+            <div class="img-thumbnail">
+                <img ng-src="images/{{url}}" width="100" height="auto">
+            </div>
+        </td>
+        <td style="vertical-align: middle">
+            <button type="button" class="btn btn-danger pull-left" ng-hide="pet.id" ng-click="removeImg(url)">Remove</button>
+        </td>
+    </tr>
+    </tbody>
+</table>

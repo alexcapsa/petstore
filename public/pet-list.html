@@ -1,0 +1,29 @@
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Image</th>
+            <th>Pet ID</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="pet in pets">
+            <td><img ng-show="pet.photoUrls.length" ng-src="/images/{{pet.photoUrls[0]}}" width="100" height="auto">
+            </td>
+            <td>{{pet.id}}</td>
+            <td>{{pet.name}}</td>
+            <td>{{pet.category.name}}</td>
+            <td>
+                <button type="button" class="btn btn-danger" ng-click="deletePet(pet)">Delete</button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-info" ng-click="viewPetDetails(pet)">View</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

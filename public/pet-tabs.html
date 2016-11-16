@@ -1,0 +1,29 @@
+<section>
+    <ul class="nav nav-pills">
+        <li ng-class="{ active:tab.isSet(1) }">
+            <a href ng-click="tab.setTab(1)">Pets</a>
+        </li>
+        <li ng-class="{ active:tab.isSet(2) }">
+            <a href ng-click="tab.setTab(2)">Categories</a>
+        </li>
+        <li ng-class="{ active:tab.isSet(3) }">
+            <a href ng-click="tab.setTab(3)">Tags</a>
+        </li>
+    </ul>
+
+    <!--  Pets Tab's Content  -->
+    <div ng-controller="PetsController">
+        <div ng-show="tab.isSet(1)">
+            <div class="list-group">
+                <pet-list></pet-list>
+                <new-pet></new-pet>
+            </div>
+            <view-pet></view-pet>
+        </div>
+        <!--  Categories Tab's Content  -->
+        <pet-categories ng-show="tab.isSet(2)"></pet-categories>
+
+        <!--  Tags Tab's Content  -->
+        <pet-tags ng-show="tab.isSet(3)"></pet-tags>
+    </div>
+</section>
