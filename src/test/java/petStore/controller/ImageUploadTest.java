@@ -24,7 +24,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringRunner.class)
 @AutoConfigureMockMvc
 @SpringBootTest
-public class ImageUploadTests {
+public class ImageUploadTest {
 
     @Autowired
     private MockMvc mvc;

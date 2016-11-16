@@ -27,7 +27,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringRunner.class)
 @AutoConfigureMockMvc
 @SpringBootTest
-public class PetControllerTests {
+public class PetControllerTest {
     @Autowired
     private MockMvc mvc;
 
